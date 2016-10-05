@@ -1,0 +1,66 @@
+{
+  "name": "pg_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.3.1"
+  },
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node",
+    "lint": "eslint .",
+    "test:unit": "better-npm-run test:unit",
+    "test:db": "better-npm-run test:db",
+    "test": "npm run test:unit"
+  },
+  "betterScripts": {
+    "test:unit": {
+      "command": "mocha test/unit",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "test:db": {
+      "command": "mocha test/db",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-as-promised": "^1.1.0",
+    "better-npm-run": "0.0.11",
+    "config": "^1.21.0",
+    "es6-promisify": "^5.0.0",
+    "joi": "^9.1.0",
+    "jsonwebtoken": "^7.1.9",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.24.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-preset-node6": "^11.0.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "dirty-chai": "^1.2.2",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "mocha": "^3.1.0",
+    "nodemon": "^1.10.2",
+    "promised": "^0.2.2",
+    "sinon": "^1.17.6",
+    "sinon-as-promised": "^4.0.2",
+    "sinon-chai": "^2.8.0"
+  }
+}
